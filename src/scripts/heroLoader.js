@@ -1,19 +1,21 @@
-const { createClient } = supabase;
+// Pastikan kamu sudah menyertakan script Supabase di HTML kamu:
+// <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-const SUPABASE_URL = "https://foneddybfnwzngdqravs.supabase.co";
+const SUPABASE_URL = "https://jqeithheusmnrxtoaisk.supabase.co";
 const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvbmVkZHliZm53em5nZHFyYXZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1OTYxNzgsImV4cCI6MjA3NDE3MjE3OH0.mxMz7ahuQp1F2CEQoQc--vXVwXAmThfKDLVsjseiXWs";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpxZWl0aGhldXNtbnJ4dG9haXNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAzODczNDQsImV4cCI6MjA3NTk2MzM0NH0._STcPPBqU6-_CfSAakcQ7DlwcSa3iOswRYaF2Ec57-U";
 
-const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// ✅ INISIALISASI BENAR
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 async function fetchHeroData() {
   try {
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabase
       .from("hero_section")
       .select("*")
-      .eq("is_active", true) // hanya ambil row aktif
-      .limit(1) // ambil 1 row saja (kalau ada banyak true)
-      .single(); // ambil random kalo gk ada yg active
+      .eq("is_active", true)
+      .limit(1)
+      .single();
 
     if (error) {
       console.error("❌ Error fetch hero data:", error);
@@ -27,7 +29,6 @@ async function fetchHeroData() {
   }
 }
 
-// Update DOM hero section
 function updateHeroSection(heroData) {
   if (!heroData) return;
 

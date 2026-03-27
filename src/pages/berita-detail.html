@@ -3,83 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Detail Berita</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 🔥 Open Graph (biar bisa preview saat dibagikan) -->
+    <meta property="og:title" content="Berita IMM KOMIKES">
+    <meta property="og:description" content="Baca berita terbaru IMM KOMIKES">
+    <meta property="og:image" content="../images/logo.png">
+    <meta property="og:type" content="article">
+
     <!-- favicons -->
     <link rel="icon" href="../images/logo.png" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="../styles/global.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Custom CSS per section taro sini -->
-    <!-- Custom CSS | Header -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/header.css" />
-    <!-- Custom CSS | Berita -->
     <link rel="stylesheet" href="../styles/berita.css" />
-    <!-- Custom CSS | Footer -->
     <link rel="stylesheet" href="../styles/footer.css" />
 
-    <!-- Header Configuration -->
-   <script>
-      window.siteConfig = {
-        brand: {
-          name: " IMM KOMIKES",
-          href: "/",
-          description: "IMM KOMIKES",
-        },
-        navigation: [
-          {
-            label: "Beranda",
-            href: "/",
-            id: "beranda",
-            active: true,
-          },
-          {
-            label: "Produk",
-            href: "/src/pages/produk.html",
-            id: "produk",
-            active: false,
-          },
-          {
-            label: "Tentang Kami",
-            href: "/src/pages/tentang-kami.html",
-            id: "tentang",
-            active: false,
-          },
-          {
-            label: "Berita",
-            href: "/src/pages/berita.html",
-            id: "berita",
-            active: false,
-          },
-          {
-            label: "Kontak",
-            href: "/src/pages/kontak.html",
-            id: "kontak",
-            active: false,
-          },
-        ],
-        cta: {
-          text: "Hubungi Kami",
-          href:"https://wa.me/82265024599?text=Halo%20IMM %20KOMIKES",
-          icon: "fab fa-whatsapp",
-        },
-        pageContent: {
-          title: "Beranda",
-          subtitle: "Halaman beranda",
-        },
-      };
-
-      // Footer Config
+    <!-- CONFIG (tidak diubah) -->
+    <script>
       window.siteConfig = {
         brand: {
           name: "IMM KOMIKES",
@@ -88,174 +36,106 @@
         },
         navigation: [
           { label: "Beranda", href: "/", id: "beranda", active: true },
-          {
-            label: "Produk",
-            href: "/src/pages/produk.html",
-            id: "produk",
-            active: false,
-          },
-          {
-            label: "Tentang Kami",
-            href: "/src/pages/tentang-kami.html",
-            id: "tentang",
-            active: false,
-          },
-          {
-            label: "Berita",
-            href: "/src/pages/berita.html",
-            id: "berita",
-            active: false,
-          },
-          {
-            label: "Kontak",
-            href: "/src/pages/kontak.html",
-            id: "kontak",
-            active: false,
-          },
+          { label: "Produk", href: "/src/pages/produk.html", id: "produk", active: false },
+          { label: "Tentang Kami", href: "/src/pages/tentang-kami.html", id: "tentang", active: false },
+          { label: "Berita", href: "/src/pages/berita.html", id: "berita", active: false },
+          { label: "Kontak", href: "/src/pages/kontak.html", id: "kontak", active: false },
         ],
         cta: {
           text: "Hubungi Kami",
-          href: "https://wa.me/82265024599?text=Halo%20IMM %20KOMIKES",
+          href: "https://wa.me/82265024599",
           icon: "fab fa-whatsapp",
         },
-        pageContent: {
-          title: "Beranda",
-          subtitle: "Halaman beranda",
-        },
         footer: {
-          description:
-            " Ikatan Mahasiswa Muhammadiyah Komisariat Ilmu Kesehatan Universitas Muhammadiyah Purwokerto. Wadah pembinaan kader untuk melahirkan generasi Islami, intelektual, dan berintegritas.",
-          socials: [
-            {
-              icon: "fab fa-instagram",
-              href: "https://www.instagram.com/immkomikes_ump?igsh=MXNubmt0cTZhbW5iaA==",
-            },
-            { icon: "fab fa-whatsapp", href: "https://wa.me/82265024599" },
-            {
-              icon: "fab fa-tiktok",
-              href: "https://www.tiktok.com/@imm.komikesump?_t=ZS-90QgiMNKwjp&_r=1",
-            },
-           
-          ],
+          description: "Ikatan Mahasiswa Muhammadiyah Komisariat Ilmu Kesehatan UMP.",
           navigationTitle: "Navigasi",
-          copyright:
-            "© 2025 IMM KOMIKES UMP.Ikatan Mahasiswa Muhammadiyah Komisariat Ilmu Kesehatan Universitas Muhammadiyah Purwokerto.",
+          copyright: "© 2025 IMM KOMIKES UMP",
         },
       };
     </script>
   </head>
+
   <body>
-    <!-- Header Section -->
+
+    <!-- HEADER -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <!-- Brand Logo -->
-          <a class="navbar-brand" href="/" id="brand-logo">
-            <img src="../images/logo-removebg-preview.png" alt="" />
-            <span id="brand-name">IMM KOMIKES</span>
+          <a class="navbar-brand" href="/">
+            <img src="../images/logo.png" />
+            <span>IMM KOMIKES</span>
           </a>
-
-          <!-- Mobile Toggle Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-            </span>
-          </button>
-
-          <!-- Navigation Menu -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto" id="main-navigation">
-              <!-- Navigation items will be populated by JS -->
-            </ul>
-
-            <!-- CTA Button -->
-            <div class="d-flex">
-              <a href="#" class="cta-button" id="cta-button" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-                <span><!-- Will be populated by JS --></span>
-              </a>
-            </div>
-          </div>
         </nav>
       </div>
     </header>
 
+    <!-- MAIN -->
     <main class="berita-container">
-      <!-- Tombol Kembali -->
+
+     <!-- Tombol Kembali -->
       <div class="back-button-wrapper container mt-4">
         <a href="/src/pages/berita.html" class="btn btn-primary">
           <i class="fas fa-arrow-left"></i> Kembali
         </a>
       </div>
 
-      <!-- Hero Section -->
+      <!-- HERO -->
       <section class="hero-berita">
-        <img id="heroImage" src="" alt="Hero Image" class="hero-img" />
+        <img id="heroImage" class="hero-img" />
         <div class="hero-overlay">
           <h1 id="postTitle"></h1>
           <small id="postDate"></small>
         </div>
       </section>
 
-      <!-- Konten -->
-      <article id="postContent" class="berita-content">Loading...</article>
-    </main>
+      <!-- 🔥 SHARE BUTTON (DITAMBAHKAN DI SINI) -->
+      <div class="container mt-3">
+        <div class="share-buttons">
+          <span>Bagikan:</span>
 
-    <!-- Footer Section -->
-    <footer class="footer_section">
-      <div class="container footer-container">
-        <!-- Brand + Deskripsi -->
-        <div class="footer-brand">
-          <a href="/" class="footer-logo">
-            <img src="../images/logo-removebg-preview.png" alt="" />
-            <span id="footer-brand-name">IMM KOMIKES</span>
+          <a id="shareWhatsapp" target="_blank" class="btn btn-success btn-sm">
+            <i class="fab fa-whatsapp"></i>
           </a>
-          <p id="footer-description"></p>
-          <div class="footer-socials" id="footer-socials">
-            <!-- icons akan diisi JS -->
-          </div>
-        </div>
 
-        <!-- Navigasi -->
-        <div class="footer-nav">
-          <h4 id="footer-nav-title"></h4>
-          <ul id="footer-navigation"></ul>
+          <a id="shareFacebook" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+          <button id="copyLink" class="btn btn-secondary btn-sm">
+            <i class="fas fa-link"></i>
+          </button>
         </div>
       </div>
 
-      <!-- Copyright -->
-      <div class="footer-bottom">
-        <p id="footer-copyright"></p>
+      <!-- CONTENT -->
+      <article id="postContent" class="berita-content container mt-3">
+        Loading...
+      </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer_section">
+      <div class="container text-center">
+        <p>© 2025 IMM KOMIKES UMP</p>
       </div>
     </footer>
 
-    <!-- Markdown parser -->
+    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script type="module" src="../scripts/loaderBerita.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="../scripts/header.js"></script>
     <script type="module" src="../scripts/berita-detail.js"></script>
-
-    <!-- Supabase JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <!-- Semua Loaders taro bagian bawah -->
-    <!-- Berita Loader -->
-    <script src="../scripts/loaderBerita.js"></script>
-    <!-- Berita Loader -->
+    <script src="../scripts/header.js"></script>
     <script src="../scripts/footerLoader.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
+
+
+
+
+
+
+

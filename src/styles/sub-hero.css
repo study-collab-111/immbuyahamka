@@ -35,20 +35,20 @@
 
 /* Khusus halaman produk */
 .sub-hero-produk {
-  background-image: url("../images/hero.jpeg");
+  background-image: url("../images/hero.jpg");
 }
 
 /* Khusus halaman tentang */
 .sub-hero-tentang {
-  background-image: url("../images/hero.jpeg");
+  background-image: url("../images/hero.jpg");
 }
 
 /* Khusus halaman berita */
 .sub-hero-berita {
-  background-image: url("../images/hero.jpeg");
+  background-image: url("../images/hero.jpg");
 }
 
 /* Khusus halaman kontak */
 .sub-hero-kontak {
-  background-image: url("../images/hero.jpeg");
+  background-image: url("../images/hero.jpg");
 }

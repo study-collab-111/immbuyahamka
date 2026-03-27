@@ -21,22 +21,22 @@ class HeaderManager {
 
     if (file === "produk.html") {
       this.setActivePage("produk");
-      document.title = "Produk Kami - Komikes";
+      document.title = "Produk Kami - Buya hamka";
     } else if (file === "tentang-kami.html") {
       this.setActivePage("tentang");
-      document.title = "Tentang Kami - Komikes";
+      document.title = "Tentang Kami - Buya hamka";
     } else if (file === "berita.html") {
       this.setActivePage("berita");
-      document.title = "Berita - Komikes";
+      document.title = "Berita - Buya hamka";
     } else if (file === "berita-detail.html") {
       this.setActivePage("berita");
-      document.title = "Kontak - Komikes";
+      document.title = "Kontak - Buya hamka";
     } else if (file === "kontak.html") {
       this.setActivePage("kontak");
-      document.title = "Kontak - Komikes";
+      document.title = "Kontak - Buya hamka";
     } else {
       this.setActivePage("beranda");
-      document.title = "Beranda - Komikes";
+      document.title = "Beranda - Buya hamka";
     }
 
     console.log("Header Manager initialized with config:", this.config);
